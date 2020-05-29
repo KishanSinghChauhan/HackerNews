@@ -10,12 +10,12 @@ const commentReducer = (state = INITIAL_STATE, action) => {
       case commentActionTypes.ADD_COMMENT:
         return {
           ...state,
-          currentComments :  addCommentID(state.currentComments , action.payload)
+          currentComments :  addCommentID( action.payload ,state.currentComments)
         };
         case commentActionTypes.ADD_UPVOTE:
         return {
           ...state,
-          currentComments :  addUpvoteToComment(state.currentComments , action.payload)
+          currentComments :  addUpvoteToComment(state.currentComments ,action.payload)
         };
         case commentActionTypes.REMOVE_DOWNVOTE:
         return {
