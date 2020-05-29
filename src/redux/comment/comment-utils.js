@@ -1,5 +1,5 @@
-export const addCommentID = (currentCommentToAdd,currentComments) => {
-    return [{ ...currentCommentToAdd, id:currentComments.length +1 ,upvotes: 0,downvotes: 0} , ...currentComments ];
+export const addCommentID = (currentComments,currentCommentToAdd) => {
+    return [ ...currentComments,{ ...currentCommentToAdd, id:currentComments.length +1 ,upvotes: 0,downvotes: 0} ];
 };
 export const addUpvoteToComment = (currentComments, addUpvoteToComment) => {
     const existingComment = currentComments.find(
