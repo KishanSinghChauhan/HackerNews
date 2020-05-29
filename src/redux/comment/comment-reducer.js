@@ -1,5 +1,5 @@
 import {commentActionTypes} from './comment-types';
-import { addCommentID } from './comment-utils';
+import { addCommentID,addUpvoteToComment} from './comment-utils';
 import { COMMENTS } from '../../shared/comments'
 
 const INITIAL_STATE = {
@@ -12,6 +12,16 @@ const commentReducer = (state = INITIAL_STATE, action) => {
           ...state,
           currentComments :  addCommentID(state.currentComments , action.payload)
         };
+        case commentActionTypes.ADD_UPVOTE:
+        return {
+          ...state,
+          currentComments :  addUpvoteToComment(state.currentComments , action.payload)
+        };
+        // case commentActionTypes.REMOVE_DOWNVOTE:
+        // return {
+        //   ...state,
+        //   currentComments :  removeDownvote(state.currentComments , action.payload)
+        // };
     default:
       return state;
   }

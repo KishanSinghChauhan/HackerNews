@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-// import {connect } from 'react-redux';
-// import {addTodo} from '../redux/todo/todo-actions';
-// import './styles/todoInput_styles.scss'
+import {connect } from 'react-redux';
+import {addComment} from '../redux/comment/comment-actions'
+import { selectCurrentUser } from '../redux/user/user-selectors';
+import { createStructuredSelector } from 'reselect';
+
+
 class TodoInput extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            comment: ''
+            comment: '',
         };
     }
     
@@ -22,10 +25,10 @@ class TodoInput extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault()        
-        // const { todo } =  this.state
-        // this.props.addTodo({ Todo:todo})
+        const { comment } =  this.state
+        this.props.addComment({commentName:comment,author: this.props.currentUser.displayName})
         this.setState({
-            comment:''
+            comment:'',
         })
     }
 
@@ -33,6 +36,7 @@ class TodoInput extends Component {
        
         return (
             <>
+            {this.props.currentUser ? (
                 <div className="row row-content todo-input">
                     <div className="col-12">
                         <form onSubmit={this.handleSubmit}>
@@ -49,12 +53,18 @@ class TodoInput extends Component {
                         </form>
                     </div>
                </div>
+            ) : null
+            }
+              
             </>
         );
     }
 }
+const mapStateToProps = createStructuredSelector({
+    currentUser: selectCurrentUser,
+  });
 
-// const mapDispatchToProps = dispatch =>({
-//     addTodo: todo => dispatch(addTodo(todo))
-// })
-export default TodoInput;
+const mapDispatchToProps = dispatch =>({
+    addComment: comment => dispatch(addComment(comment))
+})
+export default connect(mapStateToProps,mapDispatchToProps)(TodoInput);

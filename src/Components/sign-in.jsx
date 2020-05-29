@@ -1,9 +1,9 @@
 import React from 'react';
 
-import FormInput from '../form-input/form-input.component';
-import CustomButton from '../custom-button/custom-button.component';
+import FormInput from './form-input';
+import CustomButton from './custom-button';
 
-import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
+import { auth, signInWithGoogle } from '../firebase/firebase.utils';
 
 
 class SignIn extends React.Component {
@@ -60,9 +60,12 @@ class SignIn extends React.Component {
           />
           <div className='buttons'>
             <CustomButton type='submit'> Sign in </CustomButton>
-            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+            <CustomButton onClick={signInWithGoogle}>
               Sign in with Google
             </CustomButton>
+
+          <h1>Sign In with mail and sign up will be added soon</h1>
+          <h1>Yet use the google sign in feature.</h1>
           </div>
         </form>
       </div>
