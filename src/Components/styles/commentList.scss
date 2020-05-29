@@ -1,0 +1,22 @@
+.comment{
+    border-bottom: 1.3px solid rgb(7, 7, 37);
+    padding-bottom: 20px;
+    .comment-head{
+        font-size: 20px;
+        font-weight: 550;
+    }
+    .comment-para{
+        font-size: 16px;
+        padding-left: 21px;
+    }
+    .comment-vote{
+        position: relative;
+        left: 34%;
+        .like-icon{
+            cursor: pointer;
+        }
+        .dislike-icon{
+            cursor: pointer;
+        }   
+    }
+}

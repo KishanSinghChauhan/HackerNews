@@ -8,7 +8,7 @@ import commentReducer from './comment/comment-reducer';
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['']
+  whitelist: ['comment']
 };
 
 const rootReducer = combineReducers({

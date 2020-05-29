@@ -1,0 +1,25 @@
+.comment-input{
+    margin-top: 40px;
+    .text{
+        padding:0 40px;
+        .text-input{
+            width: 100%;
+            height: 100px;
+            padding: 10px 0 0 26px;
+            font-size: 18px;
+            font-weight: 500;
+            color: lightgrey;
+        }
+        .form-btn{
+            position: relative;
+            left: 86%;
+            background: red;
+            border: none;
+            color: #FFFFFF;
+            padding:10px 20px;
+            font-weight: 500;
+            margin-top: 10px;
+            border-radius: 20px;
+        }
+    }
+}

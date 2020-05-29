@@ -1,30 +1,30 @@
 export const COMMENTS =[
     {
         id:1,
-        commentName:"hello",
-        author:"john doe",
-        upvotes:10,
-        downvotes:6
+        commentName:"",
+        author:"Kishan Singh",
+        upvotes:19,
+        downvotes:3
     },
     {
         id:2,
         commentName:"hello",
-        author:"john doe",
-        upvotes:10,
-        downvotes:6
+        author:"Priyanka Goswami",
+        upvotes:20,
+        downvotes:16
     },
     {
         id:3,
         commentName:"hello",
-        author:"john doe",
-        upvotes:10,
+        author:"Narendra Modi",
+        upvotes:100,
         downvotes:6
     },
     {
         id:4,
         commentName:"hello",
-        author:"john doe",
-        upvotes:10,
-        downvotes:6
+        author:"Rahul Gandhi",
+        upvotes:88,
+        downvotes:100
     }
 ]

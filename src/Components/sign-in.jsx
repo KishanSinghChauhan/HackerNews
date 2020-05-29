@@ -4,7 +4,7 @@ import FormInput from './form-input';
 import CustomButton from './custom-button';
 
 import { auth, signInWithGoogle } from '../firebase/firebase.utils';
-
+import './styles/sign-in.scss';
 
 class SignIn extends React.Component {
   constructor(props) {
@@ -37,7 +37,7 @@ class SignIn extends React.Component {
 
   render() {
     return (
-      <div className='sign-in'>
+      <div className='sign-in mt-3'>
         <h2>I already have an account</h2>
         <span>Sign in with your email and password</span>
 
@@ -58,14 +58,15 @@ class SignIn extends React.Component {
             label='password'
             required
           />
-          <div className='buttons'>
-            <CustomButton type='submit'> Sign in </CustomButton>
-            <CustomButton onClick={signInWithGoogle}>
+          <div className='buttons d-flex flex-column justify-content-center align-items-center'>
+          <div className="m-4 w-50">
+          <CustomButton type='submit'> Sign in </CustomButton>
+
+          </div>
+            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
               Sign in with Google
             </CustomButton>
-
-          <h1>Sign In with mail and sign up will be added soon</h1>
-          <h1>Yet use the google sign in feature.</h1>
+            
           </div>
         </form>
       </div>

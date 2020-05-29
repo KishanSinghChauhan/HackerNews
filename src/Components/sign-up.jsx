@@ -4,7 +4,7 @@ import FormInput from './form-input';
 import CustomButton from './custom-button';
 
 import { auth, createUserProfileDocument } from '../firebase/firebase.utils';
-
+import './styles/sign-up.scss'
 
 class SignUp extends React.Component {
   constructor() {
@@ -92,7 +92,9 @@ class SignUp extends React.Component {
             label='Confirm Password'
             required
           />
-          <CustomButton type='submit'>SIGN UP</CustomButton>
+          <div className="w-50" style={{marginLeft:'20%'}}>
+            <CustomButton type='submit'>SIGN UP</CustomButton>
+          </div>
         </form>
       </div>
     );

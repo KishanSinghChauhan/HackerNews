@@ -3,7 +3,7 @@ import {connect } from 'react-redux';
 import {addComment} from '../redux/comment/comment-actions'
 import { selectCurrentUser } from '../redux/user/user-selectors';
 import { createStructuredSelector } from 'reselect';
-
+import './styles/commentInput.scss'
 
 class TodoInput extends Component {
     constructor(props) {
@@ -35,13 +35,13 @@ class TodoInput extends Component {
     render(){
        
         return (
-            <>
+            <div className="comment-input">
             {this.props.currentUser ? (
                 <div className="row row-content todo-input">
-                    <div className="col-12">
+                    <div className="col-12 text">
                         <form onSubmit={this.handleSubmit}>
-                            <textarea id="comment" name="comment" row="20" style={{height:'100px',width:'80%'}}
-                                placeholder=" + Add to List..."
+                            <textarea id="comment" name="comment" row="20" className="text-input"
+                                placeholder=" Type a Comment"
                                 value={this.state.comment}
                                 onChange={this.handleInputChange} 
                                 required
@@ -56,7 +56,7 @@ class TodoInput extends Component {
             ) : null
             }
               
-            </>
+            </div>
         );
     }
 }

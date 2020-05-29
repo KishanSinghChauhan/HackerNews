@@ -1,0 +1,23 @@
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid rgb(31, 31, 161);
+    .nav-head{
+        margin-right: auto;
+        padding:40px 0 20px 10px;
+        color: rgb(31, 31, 161);
+    }
+    .option{
+        font-size: 15px;
+        padding:42px 20px 0 0;
+        a{
+            color: darkblue;
+        }
+        a:hover{
+            text-decoration: none;
+            color:rgb(62, 62, 207);
+        }
+    }
+}
+
