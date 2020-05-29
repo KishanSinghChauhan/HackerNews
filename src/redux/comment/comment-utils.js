@@ -15,11 +15,11 @@ export const addUpvoteToComment = (currentComments, addUpvoteToComment) => {
     }
   
   };
-//   export const removeRatingFromSkill = (currentSkills, skillToremoveRating) => {
+  export const removeDownvoteFromComment = (currentComments, removeDownvoteFromComment) => {
   
-//     return currentSkills.map(skill =>
-//       skill.id === skillToremoveRating.id
-//         ? { ...skill, rating: skill.rating - 1 }
-//         : skill
-//     );
-//   };
+    return currentComments.map(comment =>
+      comment.id === removeDownvoteFromComment.id
+        ? { ...comment, downvotes: comment.downvotes - 1 }
+        : comment
+    );
+  };
